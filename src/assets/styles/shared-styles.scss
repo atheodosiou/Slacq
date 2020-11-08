@@ -17,3 +17,27 @@
 .offline{
     background-color: $red;
 }
+
+// Scrollbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $purple;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $light;
+    border-radius: 2px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $purple-dark; 
+    cursor:pointer;
+  }

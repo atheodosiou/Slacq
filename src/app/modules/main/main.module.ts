@@ -7,6 +7,7 @@ import { ChatComponent } from 'src/app/shared/components/chat/chat.component';
 import { AccordionModule } from 'primeng/accordion';
 import {PanelMenuModule} from 'primeng/panelmenu';
 import { ToolbarComponent } from 'src/app/shared/components/toolbar/toolbar.component';
+import { SidebarComponent } from 'src/app/shared/components/sidebar/sidebar.component';
 const primeModules = [
   // ButtonModule,
   // AccordionModule
@@ -24,6 +25,7 @@ const primeModules = [
   declarations: [
     MainComponent,
     ToolbarComponent,
+    SidebarComponent,
     ChatComponent
   ]
 })

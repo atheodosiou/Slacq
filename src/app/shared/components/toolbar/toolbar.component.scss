@@ -1,0 +1,51 @@
+@import '../../../../assets/styles/shared-styles.scss';
+
+.toolbar{
+    height: 38px;
+    background-color:$purple-dark;
+    
+    color:white;
+    .brand{
+        width: $sidbar-width;
+        img{
+            width: 23px;
+            height: 23px;
+            margin-left: .5rem;
+            transform: rotate(45deg);
+            transition: .3s;
+        }
+        .name{
+            font-size: 1.2rem;
+        }
+    }
+
+    .search-box{
+     width: calc(100vw - #{$sidbar-width});
+     input[type=text] {
+        width: 50%;
+        height: 25px;
+        box-sizing: border-box;
+        border:1px solid rgba(white,.3);
+        border-radius: 4px;
+        color: $light;
+        background-color: transparent;
+        background-image: url('../../../../assets/icons/search-white-18dp.svg');
+        background-position: 8px 3px; 
+        background-repeat: no-repeat;
+        padding: 10px 30px 10px 30px;
+
+        &:focus{
+            border:1px solid rgba(white,1);
+            color: white;
+            transition: .3s;
+        }
+      }
+
+      i{
+          color: $light;
+        &:hover{
+            @include action-hover();
+        }
+      }
+    }
+}

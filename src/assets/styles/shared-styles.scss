@@ -1,0 +1,19 @@
+
+@import './variables';
+
+//Mixins
+@mixin action-hover {
+    color:white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.online{
+    background-color: $triquize;
+}
+.idle{
+    background-color: $yellow;
+}
+.offline{
+    background-color: $red;
+}

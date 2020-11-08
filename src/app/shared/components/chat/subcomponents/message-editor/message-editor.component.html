@@ -1,0 +1,27 @@
+<div class="message-editor-wrapper p-d-flex p-ai-center p-pr-2 p-pl-2">
+  <div class="input-group">
+    <input type="text" [(ngModel)]="message" class="form-control" placeholder="Type your message here!">
+    <div class="input-group-append">
+      <button #target class="btn" pRipple (click)="op.toggle($event, target)">
+        <i class="fa fa-smile-o"></i>
+      </button>
+      <button class="btn" pRipple>
+        <i class="fa fa-at"></i>
+      </button>
+      <button class="btn" pRipple>
+        <i class="fa fa-paperclip"></i>
+      </button>
+    </div>
+  </div>
+  <div class="actions p-d-flex p-flex-row p-ai-center">
+    <button class="btn" pRipple [disabled]="!message || message===''">
+      <i class="fa fa-paper-plane"></i>
+    </button>
+  </div>
+</div>
+
+<p-overlayPanel #op [showTransitionOptions]="'3ms'" [hideTransitionOptions]="'2ms'">
+  <ng-template pTemplate>
+    <emoji-mart (emojiSelect)="emojiSelect($event)"></emoji-mart>
+  </ng-template>
+</p-overlayPanel>

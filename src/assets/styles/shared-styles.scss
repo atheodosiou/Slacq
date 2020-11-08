@@ -45,3 +45,11 @@
 ::ng-deep .p-button:focus {
     box-shadow: none;
 }
+
+.fa{
+  color: $purple;
+}
+
+.btn:focus{
+  box-shadow: none !important;
+}

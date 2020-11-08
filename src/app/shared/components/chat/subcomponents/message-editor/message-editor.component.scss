@@ -1,0 +1,48 @@
+@import '../../../../../../assets/styles/shared-styles.scss';
+
+.message-editor-wrapper{
+    height: 50px;
+    background-color: #fff;
+    border-top: 1px solid $light;
+
+    .input-group{
+        input[type=text] {
+            // width: 100%;
+            border:1px solid $light;
+            border-radius: .25rem;
+            color: $light;
+            background-color: transparent;
+            padding: .25rem 0.5rem;
+            
+            border-right: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+
+            &:focus{
+                
+                color: $purple-dark;
+                transition: .3s;
+                box-shadow: none;
+            }
+          }
+        
+          .input-group-append{
+            border:1px solid $light;
+            border-left: none;
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+    }
+}
+
+:host .btn{
+    padding: .3rem .5rem;
+
+    &:focus{
+        box-shadow: none;
+    }
+}
+
+:host div.p-overlaypanel.p-overlaypanel-content{
+    padding: 0px !important;
+}

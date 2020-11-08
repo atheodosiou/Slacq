@@ -1,0 +1,251 @@
+$purple:#3F0E40;
+$purple-dark:#350D36;
+$pink:#e51670;
+$red:#d40e0d;
+$yellow:#ebb424;
+$triquize:#49c39e;
+$light-blue:#80d2de;
+$gray:#eee;
+$light:rgb(188,171,188);
+
+//Width
+$sidbar-width:260px;
+
+//Borders
+$border-light:1px solid rgba(white,.1);
+
+//Mixins
+@mixin action-hover {
+    color:white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.online{
+    background-color: $triquize;
+}
+.idle{
+    background-color: $yellow;
+}
+.offline{
+    background-color: $red;
+}
+
+.main-container{
+    height: 100%;
+    .toolbar{
+        height: 38px;
+        background-color:$purple-dark;
+        
+        color:white;
+        .brand{
+            width: $sidbar-width;
+            img{
+                width: 23px;
+                height: 23px;
+                margin-left: .5rem;
+                transform: rotate(45deg);
+                transition: .3s;
+            }
+            .name{
+                font-size: 1.2rem;
+            }
+        }
+
+        .search-box{
+         width: calc(100vw - #{$sidbar-width});
+         input[type=text] {
+            width: 50%;
+            height: 25px;
+            box-sizing: border-box;
+            border:1px solid rgba(white,.3);
+            border-radius: 4px;
+            color: $light;
+            background-color: transparent;
+            background-image: url('../../../assets/icons/search-white-18dp.svg');
+            background-position: 8px 3px; 
+            background-repeat: no-repeat;
+            padding: 10px 30px 10px 30px;
+
+            &:focus{
+                border:1px solid rgba(white,1);
+                color: white;
+                transition: .3s;
+            }
+          }
+
+          i{
+              color: $light;
+            &:hover{
+                @include action-hover();
+            }
+          }
+        }
+    }
+    .main{
+        height: calc(100% - 38px);
+        .sidebar{
+            width: 260px;
+            background-color: $purple;
+            color: $light;
+
+            .setting-tray{
+                width:100%;
+                border-bottom: $border-light;
+                padding: 0.5rem;
+                
+                .user{
+                    .profile-image{
+                        width: 30px;
+                        height: 30px;
+                        padding: 0;
+                        border-radius: 50%;
+                    }
+                    .user-info{
+                        width: 100%;
+                        .username{
+
+                        }
+                    }
+                }
+
+                .setting-tray-right{
+                    
+                    i{
+                        font-size: 23px;
+                        margin-left: 0.5rem;
+                        color: $light;
+                        &:first-child{
+                            margin-left: 0px;
+                        }
+                        
+                        &:hover{
+                            @include action-hover();
+                        }
+                    }
+                }
+            }
+            
+            .group-wrapper{
+                width: 100%;
+                max-height: calc(50vh - 50px);
+
+                
+                .group-header{
+                    width: 100%;
+                    
+                    .description{
+                        i{
+                            font-size: 23px;
+                            margin-right: 0.5rem;
+                        }
+    
+                        .name{
+                            margin-left: -15px;
+                        }
+                    }
+                    .add-icon{
+                        font-size: 23px;
+                        &:hover{
+                            @include action-hover();
+                        }
+                    }
+                    border-bottom: $border-light;
+                }
+
+                .group-items{
+                    width: 100%;
+                    height: 100%;
+                    border-bottom: $border-light;
+                    overflow-y: auto;
+
+                    .group-item{
+                        padding-right: 0.5rem;
+                        &:hover{
+                            background-color: $purple-dark;
+                            color: white;
+                            cursor: pointer;
+                        }
+
+                        .badge{
+                            background-color: $pink;
+                            font-size: 10px;
+                            padding-top: 2px;
+                            color: white;
+                        }
+                    }
+                }
+
+                .user-items{
+                    width: 100%;
+                    height: 100%;
+                    border-bottom: $border-light;
+                    overflow-y: auto;
+
+                    .user-item{
+                        padding-right: 0.5rem;
+
+                        &:hover{
+                            background-color: $purple-dark;
+                            color: white;
+                            cursor: pointer;
+                        }
+                        img{
+                            width: 25px;
+                            height: 25px;
+                        }
+                        .user-name{
+                            width: 100%;
+                        }
+                        .user-activity{
+                            .activity{
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content{
+            width: calc(100vw - #{$sidbar-width});
+            background-color: whitesmoke;
+        }
+    }
+}
+
+ul{
+    list-style: none;
+    padding:0.25rem 0.5rem;
+    li{
+        text-decoration: none;
+    }
+    border-bottom: $border-light;
+    margin-bottom: 0px;
+}
+
+
+// Scrollbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $purple;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $light;
+    border-radius: 2px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $purple-dark; 
+    cursor:pointer;
+  }

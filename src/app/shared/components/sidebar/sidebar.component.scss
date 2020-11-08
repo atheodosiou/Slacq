@@ -5,7 +5,7 @@
     background-color: $purple;
     color: $light;
     height: calc(100vh - 38px);
-    
+
     .setting-tray{
         width:100%;
         border-bottom: $border-light;
@@ -27,7 +27,6 @@
         }
 
         .setting-tray-right{
-            
             i{
                 font-size: 23px;
                 margin-left: 0.5rem;

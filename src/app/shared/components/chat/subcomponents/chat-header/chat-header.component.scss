@@ -1,0 +1,17 @@
+@import '../../../../../../assets/styles/shared-styles.scss';
+
+.chat-header{
+    height: 47px;
+    border-bottom: 1px solid $light;
+    background-color: #fff;
+
+    .header-info{
+        flex: 1;
+        height: 100%;
+    }
+
+    .header-actions{
+        width: 70px;
+        height: 100%;
+    }
+}

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AuthenticationComponent } from './authentication.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
     RouterModule.forChild([{
       path: '',
       component: AuthenticationComponent
-    }])
+    }]),
+    ButtonModule
   ],
   declarations: [AuthenticationComponent]
 })

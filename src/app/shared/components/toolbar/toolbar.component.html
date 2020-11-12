@@ -5,6 +5,14 @@
   </div>
   <div class="search-box p-d-flex p-flex-row p-jc-between p-align-center bg-aqua">
     <input type="text" placeholder="Search..">
-    <i class="material-icons mr-1">more_vert</i>
+    <button class="btn" pRipple (click)="op.toggle($event)">
+      <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+    </button>
   </div>
 </div>
+
+<p-overlayPanel #op>
+  <ng-template pTemplate>
+    <p-button label="Log out" (onClick)="logout()"></p-button>
+  </ng-template>
+</p-overlayPanel>
